@@ -4,23 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murunyu High School</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <style>
+        .navbar {
+            background-color: #003f63; /* Match the blue color */
+        }
+        .navbar-brand img {
+            height: 40px; /* Adjust the height of the logo as needed */
+        }
+        .nav-link {
+            color: white !important;
+        }
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-top: 2px solid #003f63;
+        }
+        .info-section .contact-info, .info-section .quick-links {
+            color: #003f63;
+        }
+        .info-section .contact-info h5, .info-section .quick-links h5 {
+            color: #003f63;
+        }
+        .info-section .social-icons a {
+            margin-right: 10px;
+            color: #003f63;
+        }
+        .info-section .social-icons a:hover {
+            color: #ff9900;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="https://github.com/tonythebughunter/MurunyuHigh/raw/main/mhs%20logo.png" alt="Murunyu High School Logo" class="logo">
-            <h1>Murunyu High School</h1>
-            <p class="motto">Lighting the World</p>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img rel="preload" src="https://github.com/tonythebughunter/MurunyuHigh/raw/main/mhs%20logo.png" alt="Murunyu High School Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">  ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./academics.html">  ACADEMICS</a>
+                      
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./enrollment.html">  ENROLLMENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./students.html">  CURRENT STUDENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html"> LOGIN</a>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="info-section d-flex justify-content-around align-items-start">
+            <div class="school-info text-center">
+                <img src="https://github.com/tonythebughunter/MurunyuHigh/raw/main/mhs%20logo.png" alt="Murunyu High School Logo" height="80">
+                <div class="social-icons mt-2">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h5>Contact Us</h5>
+                <p>P5W5+PCC, Nakuru</p>
+                <p>Phone: 0702112490</p>
+            </div>
+            <div class="quick-links">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Homework Help</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
         </div>
-    </header>
-    <main>
-        <!-- Add your main content here -->
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Murunyu High School</p>
-        </div>
+
+    <footer class="bg-warning pt-4 pb-3">
+        <p class="text-center">&copy; 2024 Murunyu High School</p>
     </footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
