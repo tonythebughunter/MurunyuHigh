@@ -18,6 +18,25 @@
         .nav-link {
             color: white !important;
         }
+        .slider-section {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+        .slider-section .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slider-section .slide.active {
+            opacity: 1;
+        }
         .info-section {
             background-color: #f8f9fa;
             padding: 40px 20px;
@@ -86,6 +105,17 @@
                 </ul>
             </div>
         </nav>
+        <div class="slider-section mt-1">
+            <div class="slider-section">
+                <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/tonythebughunter/MurunyuHigh/main/admin.jpg')"></div>
+                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/tonythebughunter/MurunyuHigh/main/front.jpg')"></div>
+                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/tonythebughunter/MurunyuHigh/main/mhs.jpg')"></div>
+            </div>
+                    </div>
+    
+        <div class="info-section">
+            <!-- Your existing info section content here -->
+        </div>
 
         <div class="info-section d-flex justify-content-around align-items-start">
             <div class="school-info text-center">
@@ -121,5 +151,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
+<script>
+    $(document).ready(function(){
+        var slides = $(".slide");
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            slides.removeClass('active');
+            slides.eq(slideIndex).addClass('active');
+            slideIndex++;
+            if (slideIndex >= slides.length) {slideIndex = 0;}
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    });
+</script>
 </body>
 </html>
